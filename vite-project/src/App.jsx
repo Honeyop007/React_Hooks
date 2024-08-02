@@ -6,15 +6,23 @@ import './App.css'
 
 //usestate is a hook that pass a var and a fun in out case we hold var as a count and function as a setcount the set count every time set value of  count
 
-let [count,setcount]= useState(0);
 
 function App() {
-  
+  let [count,setcount]= useState(0);
+
   const addval = ()=>{
-   setcount(count++)
+    if (count<20) {
+      count++
+   
+    }
+    setcount(count)
     }
     const remval = ()=>{
-      setcount(count--)
+      if (count>0) {
+        count--
+        
+      }
+      setcount(count)
       }
 
 
